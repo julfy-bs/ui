@@ -1,0 +1,175 @@
+@import 'fonts/fonts';
+
+:root {
+	// font
+	--font-family-main: 'PT-Root-UI-VF', Arial, Helvetica, sans-serif;
+	--font-family-file-icon: 'Futura-PT-Demi', Arial, Helvetica, sans-serif;
+
+	// font wiegth
+	--font-weigth-bold: 700;
+	--font-weigth-medium: 500;
+	--font-weigth-regular: 400;
+
+	// font xxxs
+	--font-size-xxxs: 12px;
+	--font-line-xxxs: 16px;
+	--font-xxxs-bold: var(--font-weigth-bold) var(--font-size-xxxs) /
+		var(--font-line-xxxs) var(--font-family-main);
+	--font-xxxs-medium: var(--font-weigth-medium) var(--font-size-xxxs) /
+		var(--font-line-xxxs) var(--font-family-main);
+	--font-xxxs-regular: var(--font-weigth-regular) var(--font-size-xxxs) /
+		var(--font-line-xxxs) var(--font-family-main);
+
+	// font xxs
+	--font-size-xxs: 14px;
+	--font-line-xxs: 16px;
+	--font-xxs-bold: var(--font-weigth-bold) var(--font-size-xxs) /
+		var(--font-line-xxs) var(--font-family-main);
+	--font-xxs-medium: var(--font-weigth-medium) var(--font-size-xxs) /
+		var(--font-line-xxs) var(--font-family-main);
+	--font-xxs-regular: var(--font-weigth-regular) var(--font-size-xxs) /
+		var(--font-line-xxs) var(--font-family-main);
+
+	// font xs
+	--font-size-xs: 14px;
+	--font-line-xs: 20px;
+	--font-xs-bold: var(--font-weigth-bold) var(--font-size-xs) /
+		var(--font-line-xs) var(--font-family-main);
+	--font-xs-medium: var(--font-weigth-medium) var(--font-size-xs) /
+		var(--font-line-xs) var(--font-family-main);
+	--font-xs-regular: var(--font-weigth-regular) var(--font-size-xs) /
+		var(--font-line-xs) var(--font-family-main);
+
+	// font s (h5, p1)
+	--font-size-s: 16px;
+	--font-line-s: 24px;
+	--font-s-bold: var(--font-weigth-bold) var(--font-size-s) / var(--font-line-s)
+		var(--font-family-main);
+	--font-s-medium: var(--font-weigth-medium) var(--font-size-s) /
+		var(--font-line-s) var(--font-family-main);
+	--font-s-regular: var(--font-weigth-regular) var(--font-size-s) /
+		var(--font-line-s) var(--font-family-main);
+
+	// font m (h3 small, h4)
+	--font-size-m: 20px;
+	--font-line-m: 24px;
+	--font-m-bold: var(--font-weigth-bold) var(--font-size-m) / var(--font-line-m)
+		var(--font-family-main);
+	--font-m-medium: var(--font-weigth-medium) var(--font-size-m) /
+		var(--font-line-m) var(--font-family-main);
+	--font-m-regular: var(--font-weigth-regular) var(--font-size-m) /
+		var(--font-line-m) var(--font-family-main);
+
+	// font l ( h1 small, h3 large)
+	--font-size-l: 24px;
+	--font-line-l: 28px;
+	--font-l-bold: var(--font-weigth-bold) var(--font-size-l) / var(--font-line-l)
+		var(--font-family-main);
+	--font-l-medium: var(--font-weigth-medium) var(--font-size-l) /
+		var(--font-line-l) var(--font-family-main);
+	--font-l-regular: var(--font-weigth-regular) var(--font-size-l) /
+		var(--font-line-l) var(--font-family-main);
+
+	// font xl (h2 small)
+	--font-size-xl: 24px;
+	--font-line-xl: 32px;
+	--font-xl-bold: var(--font-weigth-bold) var(--font-size-xl) /
+		var(--font-line-xl) var(--font-family-main);
+	--font-xl-medium: var(--font-weigth-medium) var(--font-size-xl) /
+		var(--font-line-xl) var(--font-family-main);
+	--font-xl-regular: var(--font-weigth-regular) var(--font-size-xl) /
+		var(--font-line-xl) var(--font-family-main);
+
+	// font xxl (h2 large)
+	--font-size-xxl: 32px;
+	--font-line-xxl: 40px;
+	--font-xxl-bold: var(--font-weigth-bold) var(--font-size-xxl) /
+		var(--font-line-xxl) var(--font-family-main);
+	--font-xxl-medium: var(--font-weigth-medium) var(--font-size-xxl) /
+		var(--font-line-xxl) var(--font-family-main);
+	--font-xxl-regular: var(--font-weigth-regular) var(--font-size-xxl) /
+		var(--font-line-xxl) var(--font-family-main);
+
+	// font xxxl (h1 large)
+	--font-size-xxxl: 40px;
+	--font-line-xxxl: 48px;
+	--font-xxxl-bold: var(--font-weigth-bold) var(--font-size-xxxl) /
+		var(--font-line-xxxl) var(--font-family-main);
+	--font-xxxl-medium: var(--font-weigth-medium) var(--font-size-xxxl) /
+		var(--font-line-xxxl) var(--font-family-main);
+	--font-xxxl-regular: var(--font-weigth-regular) var(--font-size-xxxl) /
+		var(--font-line-xxxl) var(--font-family-main);
+
+	// font xxxxl (large)
+	--font-size-xxxxl: 48px;
+	--font-line-xxxxl: 60px;
+
+	// font small-3xl
+	--font-line-small-3xl: 40px;
+	--font-small-3xl-bold: var(--font-weigth-bold) var(--font-size-xxxl) /
+		var(--font-line-small-3xl) var(--font-family-main);
+	--font-small-3xl-medium: var(--font-weigth-medium) var(--font-size-xxxl) /
+		var(--font-line-small-3xl) var(--font-family-main);
+	--font-small-3xl-regular: var(--font-weigth-regular) var(--font-size-xxxl) /
+		var(--font-line-small-3xl) var(--font-family-main);
+
+	// colors
+	--accent: #ea5a0a;
+	--accent-hard: #aa4000;
+	--accent-light: #cc4d00;
+	--dark-primary: #374146;
+	--dark-secondary: #58646a;
+	--error: #d20202;
+	--light-primary: #ffffff;
+	--light-secondary: #f1f5f9;
+
+	// status colors
+	--new: #808080;
+	--moderation: #ffd900;
+	--requires-editing: #ff0000;
+	--confirmed: #008000;
+	--moderated: #138808;
+	--not-active: #735184;
+
+	// text colors
+	--color-text-primary: var(--dark-primary);
+	--color-text-secondary: var(--dark-secondary);
+	--color-text-secondary-light: #7b878f;
+	--color-text-nav-primary: var(--light-primary);
+	--color-text-nav-secondary: #a0abb5;
+	--color-text-nav-secondary-light: #c7d0da;
+	--color-text-accent: var(--accent);
+	--color-text-accent-hard: var(--accent-hard);
+	--color-text-accent-light: var(--accent-light);
+	--color-text-link: #048aa7;
+	--color-text-link-hard: #006b83;
+	--color-text-error: var(--error);
+
+	// bg colors
+	--color-bg-primary: var(--light-primary);
+	--color-bg-secondary: #7dcdd7;
+	--color-bg-dark-primary: var(--dark-primary);
+	--color-bg-dark-secondary: var(--dark-secondary);
+	--color-bg-accent: var(--accent);
+	--color-bg-light-primary: #f8fbff;
+	--color-bg-light-secondary: var(--light-secondary);
+
+	// button colors
+	--color-btn-blue: #54a9ea;
+	--color-btn-primary: var(--accent);
+	--color-btn-primary-light: var(--accent-light);
+	--color-btn-primary-dark: var(--accent-hard);
+	--color-btn-secondary: var(--dark-primary);
+
+	// inputs bg
+	--color-bg-input-default: var(--light-secondary);
+	--color-bg-input-hover: #e0e9f2;
+	--color-bg-autocomplete: #fcf3c5;
+	--color-error-border: var(--error);
+
+	// font numbers
+	--font-family-numbers: 'PT-Root-UI-VF', Arial, Helvetica, sans-serif;
+
+	// box-shadows
+	--table-drop-down-box-shadow: rgba(0, 77, 95, 0.24);
+}

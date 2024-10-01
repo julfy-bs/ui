@@ -1,0 +1,58 @@
+// base styles
+@use './sass/variables';
+
+// fonts
+
+// theme
+
+// global styles
+body {
+	font-family: Roboto, 'Helvetica Neue Light', 'Helvetica Neue', Helvetica,
+		Arial, 'Lucida Grande', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+code {
+	font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas,
+		'Courier New', monospace;
+}
+
+:root {
+	// CSS-variables
+}
+
+html,
+body,
+#root,
+.App {
+	height: 100%;
+}
+
+body,
+.App {
+	// padding\margin
+	// background
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+// * {
+// 	scrollbar-width: thin;
+// 	scrollbar-color: var(--highlight-bg) var(--surface-ground);
+// }
+
+// /* Chrome, Edge, and Safari */
+// *::-webkit-scrollbar {
+// 	width: 5px;
+// }
+
+// *::-webkit-scrollbar-track {
+// 	background: var(--surface-ground);
+// }
+
+// *::-webkit-scrollbar-thumb {
+// 	background-color: var(--highlight-bg);
+// 	border-radius: 0;
+// 	border: 0 solid var(--surface-ground);
+// }

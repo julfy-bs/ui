@@ -1,0 +1,75 @@
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src:
+		url('/src/sass/fonts/Raleway-Bold.ttf') format('truetype'),
+		url('/src/sass/fonts/Raleway-Bold.woff') format('woff'),
+		url('/src/sass/fonts/Raleway-Bold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src:
+		url('/src/sass/fonts/Raleway-Medium.ttf') format('truetype'),
+		url('/src/sass/fonts/Raleway-Medium.woff') format('woff'),
+		url('/src/sass/fonts/Raleway-Medium.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Raleway';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src:
+		url('/src/sass/fonts/Raleway-Regular.ttf') format('truetype'),
+		url('/src/sass/fonts/Raleway-Regular.woff') format('woff'),
+		url('/src/sass/fonts/Raleway-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'PT-Root-UI-VF';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src:
+		url('/src/sass/fonts/pt-root-ui_vf.ttf') format('truetype'),
+		url('/src/sass/fonts/pt-root-ui_vf.woff') format('woff'),
+		url('/src/sass/fonts/pt-root-ui_vf.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'PT-Root-UI-VF';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src:
+		url('/src/sass/fonts/pt-root-ui_vf.ttf') format('truetype'),
+		url('/src/sass/fonts/pt-root-ui_vf.woff') format('woff'),
+		url('/src/sass/fonts/pt-root-ui_vf.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'PT-Root-UI-VF';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src:
+		url('/src/sass/fonts/pt-root-ui_vf.ttf') format('truetype'),
+		url('/src/sass/fonts/pt-root-ui_vf.woff') format('woff'),
+		url('/src/sass/fonts/pt-root-ui_vf.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Futura-PT-Demi';
+	font-style: normal;
+	font-display: swap;
+	src:
+		url('/src/sass/fonts/futura_pt_demi.ttf') format('truetype'),
+		url('/src/sass/fonts/futura_pt_demi.woff') format('woff'),
+		url('/src/sass/fonts/futura_pt_demi.woff2') format('woff2');
+}

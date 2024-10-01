@@ -1,0 +1,133 @@
+.button {
+  margin: 0;
+  padding: calc(var(--button-padding-vert) - var(--button-padding-offset))
+  calc(var(--button-padding-horiz) - var(--button-padding-offset));
+  border-radius: 6px;
+  font: var(--font-xxxs-bold);
+  border: none;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  background: var(--button-background);
+  color: var(--button-text);
+  outline: none;
+  
+  --button-padding-horiz: 32px;
+  --button-padding-vert: 20px;
+  --button-padding-offset: 0px;
+  --counter-text: var(--button-background);
+  --counter-background: var(--button-text);
+  --waiting-color: var(--button-text);
+}
+
+.button:not(:disabled):not(:active):focus {
+  --button-padding-offset: 2px;
+  border: 2px solid var(--button-border-focus);
+}
+
+.button:not(:disabled):active {
+  background: var(--button-background-active);
+}
+
+.button:not(:disabled):hover {
+  background: var(--button-background-hover);
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.6;
+}
+
+.rounded {
+  --button-padding-horiz: 24px;
+  --button-padding-vert: 12px;
+  
+  border-radius: calc(var(--button-padding-vert) * 2);
+}
+
+.colorPrimary {
+  --button-background: var(--color-btn-primary);
+  --button-background-active: var(--color-btn-primary-dark);
+  --button-background-hover: var(--color-btn-primary-light);
+  --button-border-focus: var(--color-btn-primary-dark);
+  --button-text: var(--color-text-nav-primary);
+}
+
+.colorBlue {
+  --button-background: var(--color-btn-blue);
+  --button-background-active: var(--color-btn-primary-light);
+  --button-background-hover: var(--color-btn-primary);
+  --button-border-focus: var(--color-btn-primary);
+  --button-text: var(--color-text-nav-primary);
+}
+
+.colorSecondary {
+  --button-background: var(--color-btn-secondary);
+  --button-background-active: var(--color-btn-primary-light);
+  --button-background-hover: var(--color-btn-primary);
+  --button-border-focus: var(--color-btn-primary);
+  --button-text: var(--color-text-nav-primary);
+}
+
+.colorOutline {
+  --button-padding-offset: 1px;
+  border: 1px solid var(--color-text-nav-secondary);
+  
+  --button-background: transparent;
+  --button-background-active: transparent;
+  --button-background-hover: transparent;
+  --button-border-focus: var(--color-text-secondary-light);
+  --button-text: var(--dark-secondary);
+  
+  --counter-text: var(--color-text-nav-primary);
+  
+  --waiting-color: var(--color-text-nav-secondary);
+}
+
+.colorOutline:not(:disabled):active {
+  --button-text: var(--color-btn-primary-light);
+  --button-padding-offset: 1px;
+  border: 1px solid var(--color-btn-primary-light);
+}
+
+.colorOutline:not(:disabled):hover {
+  --button-text: var(--color-btn-primary);
+  --button-padding-offset: 1px;
+  border: 1px solid var(--color-btn-primary);
+}
+
+.countAccent {
+  --counter-text: var(--color-text-nav-primary);
+  --counter-background: var(--accent);
+}
+
+.button[data-count]::after {
+  content: attr(data-count);
+  font: inherit;
+  background: var(--counter-background);
+  color: var(--counter-text);
+  padding: 0 5px;
+  border-radius: 18px;
+  margin-left: 8px;
+  min-width: 7px;
+}
+
+.waiting::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  background: var(--waiting-color);
+  mask: url(./icons/wait.svg);
+  animation: button-waiting 1s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  margin-right: 4px;
+}
+
+@keyframes button-waiting {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
