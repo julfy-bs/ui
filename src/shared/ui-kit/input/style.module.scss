@@ -1,0 +1,205 @@
+$input-line-height: 20px;
+
+$input-font: normal var(--font-weigth-regular) var(--font-size-s) /
+	$input-line-height var(--font-family-numbers);
+
+$font-xs-regular: normal var(--font-weigth-regular) var(--font-size-xxs) /
+	var(--font-line-xxs) var(--font-family-numbers);
+
+$font-xxxs-regular: normal var(--font-weigth-regular) var(--font-size-xxxs) /
+	var(--font-line-xxxs) var(--font-family-numbers);
+
+.input-wrapper {
+	position: relative;
+}
+
+.input {
+	position: relative;
+	display: grid;
+	grid-template-areas:
+		'label . controls'
+		'input . controls';
+	grid-template-columns: 1fr 12px auto;
+	grid-template-rows: auto minmax(20px, 1fr);
+	width: 100%;
+	height: 48px;
+	padding: 5px 11px 5px 15px;
+	box-sizing: border-box;
+	background-color: var(--light-secondary);
+	border: 1px solid transparent;
+	border-radius: 6px;
+
+	&:has(.input__field:-webkit-autofill) {
+		background-color: var(--color-bg-autocomplete);
+	}
+
+	&:hover {
+		background: var(--color-bg-input-hover);
+	}
+
+	&_focused {
+		background-color: var(--light-primary);
+		border-color: var(--color-text-nav-secondary);
+	}
+
+	&_readonly {
+		background: var(--light-primary);
+		border-color: var(--color-bg-input-hover);
+	}
+
+	&_disabled {
+		background: var(--light-secondary);
+	}
+
+	&_has-error {
+		border-color: var(--error);
+	}
+
+	.input__mask-wrapper {
+		grid-area: input;
+		color: var(--color-text-secondary-light);
+		font: $input-font;
+	}
+
+	.input__field {
+		position: relative;
+		grid-area: input;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		background: none;
+		border: none;
+		outline: none;
+		color: var(--dark-primary);
+		font: $input-font;
+		letter-spacing: normal;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+
+		&:read-only:placeholder-shown,
+		&:not(:focus):placeholder-shown {
+			padding-top: 0;
+			padding-bottom: 0;
+			color: var(--color-text-secondary-light);
+			font: $input-font;
+		}
+
+		&:disabled {
+			opacity: 0.6;
+		}
+	}
+
+	.input__controls {
+		display: flex;
+		align-items: center;
+		grid-area: controls;
+	}
+
+	.input__field_default {
+		align-self: center;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+
+	.input__field_type_text {
+	}
+
+	.input__field_type_date {
+		&::-webkit-calendar-picker-indicator {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: auto;
+			height: auto;
+			background: transparent;
+			cursor: pointer;
+			color: transparent;
+		}
+	}
+
+	.input__field_type_password {
+		&::-ms-reveal,
+		&::-ms-clear {
+			display: none;
+		}
+
+		& {
+			position: relative;
+		}
+	}
+
+	.input__field_type_number {
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		& {
+			-moz-appearance: textfield;
+			-webkit-appearance: textfield;
+		}
+
+		&:hover,
+		&:focus {
+			-moz-appearance: number-input;
+		}
+	}
+
+	.input__field_type_date {
+		::-webkit-datetime-edit-year-field:not([aria-valuenow]),
+		::-webkit-datetime-edit-month-field:not([aria-valuenow]),
+		::-webkit-datetime-edit-day-field:not([aria-valuenow]) {
+			color: transparent;
+		}
+	}
+
+	.input__label {
+		display: flex;
+		grid-area: label;
+		color: var(--color-text-secondary-light);
+		text-overflow: ellipsis;
+		font: $font-xxxs-regular;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	.input__btn {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		width: 24px;
+		height: 24px;
+		padding: 0;
+		margin: 0;
+		border: 0;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+
+	.input__btn_type_clear-text {
+		background: url(./assets/icon_cross_default.svg) no-repeat center;
+		background-size: 24px 24px;
+	}
+
+	.input__btn_position_last {
+		order: 2;
+	}
+}
+
+.error-message {
+	display: none;
+	padding: 0;
+	margin: 4px 0 0;
+	color: var(--error);
+	font: $font-xs-regular;
+}
+
+.show-error {
+	display: inherit;
+	margin-bottom: 20px;
+}
