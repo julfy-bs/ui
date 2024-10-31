@@ -1,8 +1,8 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    "src/components/**/*.ts",
-    "src/components/**/*.tsx",
+    "src/shared/**/*.ts",
+    "src/shared/**/*.tsx",
   ],
   "exclude": [
     "node_modules",
